@@ -35,4 +35,15 @@ Each "Micro-Lab" is self-contained and organized to facilitate direct comparison
 | **Collections** | Mutable, verbose (`new ArrayList` + `.add`) | **Factory Methods** (`List.of()`) |
 | **Multi-line Strings** | Concatenation hell (`"{\n" + val + "\n}"`) | **Text Blocks** (`""" ... """`) |
 | **String Validation** | `str != null && !str.trim().isEmpty()` | **Methods** (`str.isBlank()`) |
-| **File I/O** | `BufferedReader` loop inside try-catch | **NIO 2** (`Files.readString()`) |
+| **File I/O** | `BufferedReader` loop inside try-catch | **NIO 2** (`Files.readString()`) <br/>|
+
+### 🧪 Lab 02: Data Modeling with Records
+**Goal:** Simplify data transfer objects (DTOs) by enforcing immutability and eliminating boilerplate code.
+
+| Feature Area | Legacy Approach (Java 8) | Modern Approach (Java 21) |
+| :--- | :--- | :--- |
+| **Class Definition** | Verbose (`private final` fields + Constructor) | **Compact Header** (`record Name(...)`) |
+| **Boilerplate** | Manual `equals`, `hashCode`, `toString` | **Auto-generated** by Compiler |
+| **Data Access** | Java Bean Getters (`getAmount()`) | **Fluent Accessors** (`amount()`) |
+| **Validation** | Manual checks inside full constructor | **Compact Constructor** (Validation logic only) |
+| **Mutability** | Mutable Setters (`setAmount(...)`) | **Immutable** (Use "Wither" pattern for copies) |
