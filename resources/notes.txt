@@ -1,0 +1,2 @@
+Line 1: Legacy code is verbose.
+Line 2: Modern Java is concise.

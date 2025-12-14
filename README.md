@@ -24,3 +24,15 @@ Each "Micro-Lab" is self-contained and organized to facilitate direct comparison
   /01-lab-concept-name
      /legacy  (Traditional implementation style)
      /modern  (Refactored implementation using latest features)
+```
+
+### 🧪 Lab 01: Syntax Cleanup & Boilerplate Reduction
+**Goal:** Eliminate visual noise and imperative plumbing to focus on business logic.
+
+| Feature Area | Legacy Approach (Java 8) | Modern Approach (Java 21) |
+| :--- | :--- | :--- |
+| **Variable Declaration** | Explicit typing (`List<String> h = ...`) | **Local Type Inference** (`var h = ...`) |
+| **Collections** | Mutable, verbose (`new ArrayList` + `.add`) | **Factory Methods** (`List.of()`) |
+| **Multi-line Strings** | Concatenation hell (`"{\n" + val + "\n}"`) | **Text Blocks** (`""" ... """`) |
+| **String Validation** | `str != null && !str.trim().isEmpty()` | **Methods** (`str.isBlank()`) |
+| **File I/O** | `BufferedReader` loop inside try-catch | **NIO 2** (`Files.readString()`) |
