@@ -47,3 +47,13 @@ Each "Micro-Lab" is self-contained and organized to facilitate direct comparison
 | **Data Access** | Java Bean Getters (`getAmount()`) | **Fluent Accessors** (`amount()`) |
 | **Validation** | Manual checks inside full constructor | **Compact Constructor** (Validation logic only) |
 | **Mutability** | Mutable Setters (`setAmount(...)`) | **Immutable** (Use "Wither" pattern for copies) |
+
+### 🧪 Lab 03: Switch Expressions
+**Goal:** Reduce cyclomatic complexity and prevent logical bugs by using exhaustive, functional switch expressions.
+
+| Feature Area | Legacy Approach (Java 8) | Modern Approach (Java 21) |
+| :--- | :--- | :--- |
+| **Structure** | Control Flow Statement (`switch ... case: break;`) | **Functional Expression** (`var res = switch(...)`) |
+| **Fall-through** | Accidental (Missing `break` executes next case) | **No Fall-through** (Arrow syntax `->` is precise) |
+| **Return Value** | Must assign to external variable | **Direct Return** (Returns value or uses `yield`) |
+| **Safety** | Compiler ignores missing Enum cases | **Exhaustiveness Check** (Compiler error if case missing) |
