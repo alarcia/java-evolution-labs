@@ -29,7 +29,7 @@ Each "Micro-Lab" is self-contained and organized to facilitate direct comparison
 ### 🧪 Lab 01: Syntax Cleanup & Boilerplate Reduction
 **Goal:** Eliminate visual noise and imperative plumbing to focus on business logic.
 
-| Feature Area | Legacy Approach (Java 8) | Modern Approach (Java 21) |
+| Feature Area | Legacy Approach | Modern Approach |
 | :--- | :--- | :--- |
 | **Variable Declaration** | Explicit typing (`List<String> h = ...`) | **Local Type Inference** (`var h = ...`) |
 | **Collections** | Mutable, verbose (`new ArrayList` + `.add`) | **Factory Methods** (`List.of()`) |
@@ -40,7 +40,7 @@ Each "Micro-Lab" is self-contained and organized to facilitate direct comparison
 ### 🧪 Lab 02: Data Modeling with Records
 **Goal:** Simplify data transfer objects (DTOs) by enforcing immutability and eliminating boilerplate code.
 
-| Feature Area | Legacy Approach (Java 8) | Modern Approach (Java 21) |
+| Feature Area | Legacy Approach | Modern Approach |
 | :--- | :--- | :--- |
 | **Class Definition** | Verbose (`private final` fields + Constructor) | **Compact Header** (`record Name(...)`) |
 | **Boilerplate** | Manual `equals`, `hashCode`, `toString` | **Auto-generated** by Compiler |
@@ -51,7 +51,7 @@ Each "Micro-Lab" is self-contained and organized to facilitate direct comparison
 ### 🧪 Lab 03: Switch Expressions
 **Goal:** Reduce cyclomatic complexity and prevent logical bugs by using exhaustive, functional switch expressions.
 
-| Feature Area | Legacy Approach (Java 8) | Modern Approach (Java 21) |
+| Feature Area | Legacy Approach | Modern Approach |
 | :--- | :--- | :--- |
 | **Structure** | Control Flow Statement (`switch ... case: break;`) | **Functional Expression** (`var res = switch(...)`) |
 | **Fall-through** | Accidental (Missing `break` executes next case) | **No Fall-through** (Arrow syntax `->` is precise) |
