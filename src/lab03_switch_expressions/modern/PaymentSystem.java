@@ -32,10 +32,8 @@ public class PaymentSystem {
         };
 
         // 3. EXHAUSTIVENESS CHECK
-        // Notice there is NO 'default'.
-        // Since we covered all Enum cases, Java compiles.
+        // There is NO 'default'.
         // If a case is missing, the compiler will throw ERROR immediately.
-        // This prevents business logic bugs when adding new payment types.
 
         var status = (fee == 0.0) ? "FREE" : "FEE_APPLIED";
 
