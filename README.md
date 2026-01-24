@@ -57,3 +57,24 @@ Each "Micro-Lab" is self-contained and organized to facilitate direct comparison
 | **Fall-through** | Accidental (Missing `break` executes next case) | **No Fall-through** (Arrow syntax `->` is precise) |
 | **Return Value** | Must assign to external variable | **Direct Return** (Returns value or uses `yield`) |
 | **Safety** | Compiler ignores missing Enum cases | **Exhaustiveness Check** (Compiler error if case missing) |
+
+### 🧪 Lab 04: Pattern Matching & Type Switches
+**Goal:** Remove explicit casting and simplify polymorphic logic using type patterns.
+
+| Feature Area | Legacy Approach (Java 8) | Modern Approach (Java 21) |
+| :--- | :--- | :--- |
+| **Type Checking** | `if (obj instanceof String)` | `if (obj instanceof String s)` |
+| **Casting** | Manual: `String s = (String) obj;` | **Automatic**: Variable injected instantly |
+| **Control Flow** | Cascade of `if-else if-else` | **Pattern Switch** (`case Integer i ->`) |
+| **Conditional Logic** | Nested `if` inside the block | **Guarded Patterns** (`case ... when ...`) |
+| **Null Handling** | Explodes or requires explicit check | `case null ->` supported |
+
+### 🧪 Lab 05: Sequenced Collections
+**Goal:** Unify access to the first and last elements across different collection types.
+
+| Feature Area | Legacy Approach (Java 8) | Modern Approach (Java 21) |
+| :--- | :--- | :--- |
+| **Get First** | `list.get(0)` vs `set.iterator().next()` | **Unified:** `coll.getFirst()` |
+| **Get Last** | `list.get(size-1)` vs `Manual Loop` | **Unified:** `coll.getLast()` (O(1)) |
+| **Reverse View** | `Collections.reverse(list)` (Mutates!) | **Unified:** `coll.reversed()` (Lightweight View) |
+| **Hierarchy** | Fragmented (`Deque`, `List`, `SortedSet`) | **Unified Interface:** `SequencedCollection` |
