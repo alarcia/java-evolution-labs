@@ -26,7 +26,7 @@ public class NotificationService {
         // LEGACY PATTERN: "Test - Cast - Use"
         // 1. Check the type
         if (notification instanceof Email) {
-            // 2. We MUST cast it manually to access fields
+            // 2. Manual cast to access fields
             Email email = (Email) notification;
             System.out.println("Sending Email to " + email.email + ": " + email.msg);
 

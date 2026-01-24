@@ -78,3 +78,13 @@ Each "Micro-Lab" is self-contained and organized to facilitate direct comparison
 | **Get Last** | `list.get(size-1)` vs `Manual Loop` | **Unified:** `coll.getLast()` (O(1)) |
 | **Reverse View** | `Collections.reverse(list)` (Mutates!) | **Unified:** `coll.reversed()` (Lightweight View) |
 | **Hierarchy** | Fragmented (`Deque`, `List`, `SortedSet`) | **Unified Interface:** `SequencedCollection` |
+
+### 🧪 Lab 06: Advanced Pattern Matching & Sealed Classes
+**Goal:** Enforce strict domain hierarchies and declaratively extract data from objects.
+
+| Feature Area | Legacy Approach (Java 8) | Modern Approach (Java 21) |
+| :--- | :--- | :--- |
+| **Hierarchy Control** | Open inheritance (`extends` is free for all) | **Sealed Classes** (`sealed` ... `permits`) |
+| **Data Extraction** | Manual getters (`var x = obj.getX()`) | **Record Patterns** (`case Point(var x, var y)`) |
+| **Switch Safety** | Requires `default` (Silent bugs possible) | **Exhaustive** (Compiler enforces all cases) |
+| **Readability** | Verbose casting & temporary variables | **Declarative** "Shape" matching |
