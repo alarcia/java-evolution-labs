@@ -123,3 +123,14 @@ Each "Micro-Lab" is self-contained and organized to facilitate direct comparison
 | **Exceptions** | `catch (Exception e)` (Unused warning) | `catch (Exception _)` |
 | **Loops** | `for (String s : list)` (Unused warning) | `for (String _ : list)` |
 | **Patterns** | `case Point(int x, int y)` (Unused y) | `case Point(int x, _)` |
+
+### 🧪 Lab 09: Stream Gatherers
+**Goal:** Perform complex intermediate stream operations (windowing, grouping) without loops.
+
+**Introduced in:** Java 22 (Preview, March 2024) / Java 24 (Standard, 2025)
+
+| Feature Area | Legacy Approach | Modern Approach |
+| :--- | :--- | :--- |
+| **Sliding Window** | `for (i=0; i < size-w; i++)` (Error prone) | `.gather(Gatherers.windowSliding(w))` |
+| **Fixed Batches** | Manual lists or external libraries (Guava) | `.gather(Gatherers.windowFixed(w))` |
+| **Custom Logic** | Break stream into Loop | Create custom `Gatherer` |
