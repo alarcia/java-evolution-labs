@@ -29,6 +29,8 @@ Each "Micro-Lab" is self-contained and organized to facilitate direct comparison
 ### 🧪 Lab 01: Syntax Cleanup & Boilerplate Reduction
 **Goal:** Eliminate visual noise and imperative plumbing to focus on business logic.
 
+**Introduced in:** Java 10 (var, 2018) & Java 15 (Text Blocks, 2020)
+
 | Feature Area | Legacy Approach | Modern Approach |
 | :--- | :--- | :--- |
 | **Variable Declaration** | Explicit typing (`List<String> h = ...`) | **Local Type Inference** (`var h = ...`) |
@@ -39,6 +41,8 @@ Each "Micro-Lab" is self-contained and organized to facilitate direct comparison
 
 ### 🧪 Lab 02: Data Modeling with Records
 **Goal:** Simplify data transfer objects (DTOs) by enforcing immutability and eliminating boilerplate code.
+
+**Introduced in:** Java 16 (March 2021)
 
 | Feature Area | Legacy Approach | Modern Approach |
 | :--- | :--- | :--- |
@@ -51,6 +55,8 @@ Each "Micro-Lab" is self-contained and organized to facilitate direct comparison
 ### 🧪 Lab 03: Switch Expressions
 **Goal:** Reduce cyclomatic complexity and prevent logical bugs by using exhaustive, functional switch expressions.
 
+**Introduced in:** Java 14 (March 2020)
+
 | Feature Area | Legacy Approach | Modern Approach |
 | :--- | :--- | :--- |
 | **Structure** | Control Flow Statement (`switch ... case: break;`) | **Functional Expression** (`var res = switch(...)`) |
@@ -60,6 +66,8 @@ Each "Micro-Lab" is self-contained and organized to facilitate direct comparison
 
 ### 🧪 Lab 04: Pattern Matching & Type Switches
 **Goal:** Remove explicit casting and simplify polymorphic logic using type patterns.
+
+**Introduced in:** Java 16 (instanceof, 2021) & Java 21 (Switch, 2023)
 
 | Feature Area | Legacy Approach (Java 8) | Modern Approach (Java 21) |
 | :--- | :--- | :--- |
@@ -72,6 +80,8 @@ Each "Micro-Lab" is self-contained and organized to facilitate direct comparison
 ### 🧪 Lab 05: Sequenced Collections
 **Goal:** Unify access to the first and last elements across different collection types.
 
+**Introduced in:** Java 21 (September 2023)
+
 | Feature Area | Legacy Approach (Java 8) | Modern Approach (Java 21) |
 | :--- | :--- | :--- |
 | **Get First** | `list.get(0)` vs `set.iterator().next()` | **Unified:** `coll.getFirst()` |
@@ -81,6 +91,8 @@ Each "Micro-Lab" is self-contained and organized to facilitate direct comparison
 
 ### 🧪 Lab 06: Advanced Pattern Matching & Sealed Classes
 **Goal:** Enforce strict domain hierarchies and declaratively extract data from objects.
+
+**Introduced in:** Java 17 (Sealed, 2021) & Java 21 (Record Patterns, 2023)
 
 | Feature Area | Legacy Approach (Java 8) | Modern Approach (Java 21) |
 | :--- | :--- | :--- |
@@ -92,9 +104,22 @@ Each "Micro-Lab" is self-contained and organized to facilitate direct comparison
 ### 🧪 Lab 07: Virtual Threads (Project Loom)
 **Goal:** Achieve high-throughput concurrency for I/O-bound applications without complex reactive code.
 
+**Introduced in:** Java 21 (September 2023)
+
 | Feature Area | Legacy Approach (Java 8/11) | Modern Approach (Java 21) |
 | :--- | :--- | :--- |
 | **Thread Model** | 1 Java Thread = 1 OS Thread (Heavy) | **Virtual Threads** (Lightweight, managed by JVM) |
 | **Scalability** | Limited by OS (~4k - 10k threads max) | **Millions** of threads possible |
 | **Blocking Code** | Wastes resources (Blocks OS Thread) | **Non-blocking runtime** (Unmounts automatically) |
 | **Development** | Complex Reactive (WebFlux/Async) | **Simple Sync Code** (Code looks blocking, runs async) |
+
+### 🧪 Lab 08: Unnamed Variables & Patterns
+**Goal:** Reduce code noise by explicitly ignoring unused variables.
+
+**Introduced in:** Java 22 (March 2024)
+
+| Feature Area | Legacy Approach | Modern Approach (Java 22+) |
+| :--- | :--- | :--- |
+| **Exceptions** | `catch (Exception e)` (Unused warning) | `catch (Exception _)` |
+| **Loops** | `for (String s : list)` (Unused warning) | `for (String _ : list)` |
+| **Patterns** | `case Point(int x, int y)` (Unused y) | `case Point(int x, _)` |
