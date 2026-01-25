@@ -88,3 +88,13 @@ Each "Micro-Lab" is self-contained and organized to facilitate direct comparison
 | **Data Extraction** | Manual getters (`var x = obj.getX()`) | **Record Patterns** (`case Point(var x, var y)`) |
 | **Switch Safety** | Requires `default` (Silent bugs possible) | **Exhaustive** (Compiler enforces all cases) |
 | **Readability** | Verbose casting & temporary variables | **Declarative** "Shape" matching |
+
+### 🧪 Lab 07: Virtual Threads (Project Loom)
+**Goal:** Achieve high-throughput concurrency for I/O-bound applications without complex reactive code.
+
+| Feature Area | Legacy Approach (Java 8/11) | Modern Approach (Java 21) |
+| :--- | :--- | :--- |
+| **Thread Model** | 1 Java Thread = 1 OS Thread (Heavy) | **Virtual Threads** (Lightweight, managed by JVM) |
+| **Scalability** | Limited by OS (~4k - 10k threads max) | **Millions** of threads possible |
+| **Blocking Code** | Wastes resources (Blocks OS Thread) | **Non-blocking runtime** (Unmounts automatically) |
+| **Development** | Complex Reactive (WebFlux/Async) | **Simple Sync Code** (Code looks blocking, runs async) |
